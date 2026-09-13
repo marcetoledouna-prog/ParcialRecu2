@@ -1,10 +1,22 @@
 /*
-Layout resuelto con flexbox como pide la consigna).
+Layout resuelto con flexbox.
 
 Tipografía de Google Fonts indicada en la consigna: "Barlow"
-(únicamente en títulos y elementos destacados
-Body y tipo gral .
+Se usa únicamente en títulos y elementos destacados
 */
+
+
+/*Body y tipo gral.
+Se usa la imagen de fondo entregada (fondo.png) en las tres
+páginas. Los márgenes de los bloques permiten que el fondo se
+siga viendo alrededor del contenido.*/
+
+* {
+
+    box-sizing: border-box;
+
+}
+
 
 body {
 
@@ -31,12 +43,10 @@ body {
 }
 
 
-/*
-CONTENEDOR PRINCIPAL
+/*CONTENEDOR PRINCIPAL
 Todo el contenido de cada página está dentro de este bloque,
 que tiene ancho máximo y queda centrado gracias al flexbox
-definido en el body.
-*/
+definido en el body.*/
 
 #pagina {
 
@@ -47,8 +57,7 @@ definido en el body.
 }
 
 
-/*
-TÍTULOS Y ELEMENTOS DESTACADOS 
+/*TÍTULOS Y ELEMENTOS DESTACADOS
 Acá, y solo acá, se usa la tipografía de Google Fonts.
 */
 
@@ -100,9 +109,9 @@ Acá, y solo acá, se usa la tipografía de Google Fonts.
 }
 
 
-/*
-ENCABEZADO
-*/
+/*ENCABEZADO
+Igual en las tres páginas. Mismo padding lateral que el nav
+para que ambos queden alineados con el resto del contenido.*/
 
 header {
 
@@ -135,11 +144,14 @@ header .titulo2 {
 /*MENÚ DE NAVEGACIÓN
 Horizontal, resuelto con flexbox. Se definen los 4 estados de
 los links en el orden correcto: link, visited, hover, active.
-*/
+Mismo padding lateral que el header (1.5rem) para que ambos
+bloques queden alineados entre sí.*/
 
 nav {
 
     width: 100%;
+
+    padding: 0 1.5rem;
 
     background-color: #14213d;
 
@@ -152,7 +164,7 @@ nav ul {
 
     margin: 0;
 
-    padding: 0.8rem;
+    padding: 0.8rem 0;
 
     display: flex;
 
@@ -223,9 +235,7 @@ nav a:active {
 }
 
 
-/*
-CONTENIDO PRINCIPAL
-*/
+/*CONTENIDO PRINCIPAL*/
 
 main {
 
@@ -236,10 +246,7 @@ main {
 }
 
 
-/*
-LAYOUT DE 3 COLUMNAS (página de inicio)
-Tres columnas del mismo ancho resueltas con flexbox
-*/
+/*LAYOUT DE 3 COLUMNAS (página de inicio)*/
 
 .fila-3col {
 
@@ -249,8 +256,6 @@ Tres columnas del mismo ancho resueltas con flexbox
 
     flex-wrap: wrap;
 
-    gap: 1.5rem;
-
 }
 
 
@@ -259,6 +264,8 @@ Tres columnas del mismo ancho resueltas con flexbox
     flex: 1;
 
     min-width: 15rem;
+
+    margin: 0.75rem;
 
     padding: 1.5rem;
 
@@ -273,6 +280,9 @@ Tres columnas del mismo ancho resueltas con flexbox
 
 /*
 LAYOUT DE 2 COLUMNAS DE ANCHO DIFERENTE (página de obras)
+
+La columna angosta usa flex: 1 y la columna ancha usa flex: 2,
+por lo tanto la columna ancha ocupa el doble de espacio.
 */
 
 .fila-2col {
@@ -283,8 +293,6 @@ LAYOUT DE 2 COLUMNAS DE ANCHO DIFERENTE (página de obras)
 
     flex-wrap: wrap;
 
-    gap: 1.5rem;
-
 }
 
 
@@ -293,6 +301,8 @@ LAYOUT DE 2 COLUMNAS DE ANCHO DIFERENTE (página de obras)
     flex: 1;
 
     min-width: 14rem;
+
+    margin: 0.75rem;
 
     padding: 1.5rem;
 
@@ -311,6 +321,8 @@ LAYOUT DE 2 COLUMNAS DE ANCHO DIFERENTE (página de obras)
 
     min-width: 20rem;
 
+    margin: 0.75rem;
+
     padding: 1.5rem;
 
     background-color: rgba(255, 255, 255, 0.92);
@@ -322,9 +334,7 @@ LAYOUT DE 2 COLUMNAS DE ANCHO DIFERENTE (página de obras)
 }
 
 
-/*
-BLOQUE DE CONTENIDO GENÉRICO (página de experiencia)
-*/
+/*BLOQUE DE CONTENIDO GENÉRICO (página de experiencia)*/
 
 .bloque {
 
@@ -341,9 +351,7 @@ BLOQUE DE CONTENIDO GENÉRICO (página de experiencia)
 }
 
 
-/*
-TEXTOS, CITAS Y LISTAS
-*/
+/*TEXTOS, CITAS Y LISTAS*/
 
 p {
 
@@ -386,8 +394,7 @@ ul.lista-conceptos li {
 
 
 /*
-IMÁGENES
-*/
+IMÁGENES*/
 
 img {
 
@@ -402,6 +409,208 @@ img {
 }
 
 
+/*FILA DE IMÁGENES 
+Las tres imágenes (hemmer-3, 4 y 5) se reparten el ancho
+disponible en partes iguales gracias a flexbox. min-width: 0
+permite que se achiquen todo lo necesario para no desbordar
+el contenedor, quedando así alineadas con el header y el nav.*/
+
+.fila-imagenes {
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+}
+
+
+.fila-imagenes img {
+
+    flex: 1 1 0;
+
+    min-width: 0;
+
+    width: 100%;
+
+    height: 12rem;
+
+    object-fit: cover;
+
+    margin: 0.5rem;
+
+}
+
+
+/*GALERÍA DE OBRAS (generada con JavaScript)*/
+
+#galeria-obras {
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    margin: 1rem 0;
+
+}
+
+
+.obra {
+
+    flex: 1;
+
+    min-width: 11rem;
+
+    margin: 0.5rem;
+
+    background-color: #14213d;
+
+    color: #f2f2f2;
+
+    padding: 0.8rem;
+
+    border-radius: 0.4rem;
+
+    text-align: center;
+
+}
+
+
+.obra img {
+
+    width: 100%;
+
+    margin: 0 0 0.6rem 0;
+
+}
+
+
+.obra p {
+
+    margin: 0;
+
+    font-size: 0.9rem;
+
+}
+
+
+/*BOTONES*/
+
+button {
+
+    padding: 0.6rem 1.2rem;
+
+    margin: 0.4rem 0.4rem 0.4rem 0;
+
+    background-color: #3ab0ff;
+
+    color: #0d1b2a;
+
+    border: 0.1rem solid #14213d;
+
+    border-radius: 0.4rem;
+
+    font-size: 1rem;
+
+}
+
+
+button:disabled {
+
+    background-color: #cccccc;
+
+    color: #666666;
+
+}
+
+
+/*DATO CURIOSO*/
+
+#caja-dato {
+
+    background-color: #14213d;
+
+    color: #f2f2f2;
+
+    padding: 1rem;
+
+    border-radius: 0.4rem;
+
+    margin-top: 1rem;
+
+}
+
+
+/*FORMULARIO DEL EJERCICIO*/
+
+.formulario-ejercicio {
+
+    margin: 1rem 0;
+
+    padding: 1rem;
+
+    background-color: #eef7ff;
+
+    border-radius: 0.4rem;
+
+}
+
+
+.formulario-ejercicio label {
+
+    display: block;
+
+    margin-top: 0.8rem;
+
+    font-weight: bold;
+
+}
+
+
+.formulario-ejercicio input {
+
+    width: 90%;
+
+    max-width: 20rem;
+
+    padding: 0.5rem;
+
+    margin-top: 0.3rem;
+
+    border: 0.1rem solid #3ab0ff;
+
+    border-radius: 0.3rem;
+
+}
+
+
+#resultados {
+
+    margin-top: 1rem;
+
+    padding: 1rem;
+
+    background-color: #14213d;
+
+    color: #f2f2f2;
+
+    border-radius: 0.4rem;
+
+}
+
+
+#resultados p {
+
+    color: #f2f2f2;
+
+}
+
+
+/*FOOTER
+Igual en las tres páginas.*/
 
 footer {
 
