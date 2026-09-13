@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Obras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+
+<body>
+
+
+    <div id="pagina">
+
+
+        <header>
+
+            <h1 class="titulo1">Rafael Lozano-Hemmer</h1>
+
+            <h2 class="titulo2">Interactividad, espacio público y arte tecnológico</h2>
+
+        </header>
+
+
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">Inicio</a></li>
+
+                <li><a href="obras.html">Obras</a></li>
+
+                <li><a href="experiencia.html">Experiencia</a></li>
+
+            </ul>
+
+        </nav>
+
+
+        <main>
+
+
+            <!-- LAYOUT DE 2 COLUMNAS DE ANCHO DIFERENTE, con flexbox -->
+
+            <div class="fila-2col">
+
+
+                <!-- COLUMNA ANGOSTA -->
+
+                <aside class="col-angosta">
+
+                    <h2 class="titulo2">Sistemas interactivos</h2>
+
+                    <img src="img/lozano-hemmer-1.jpg" alt="Instalación interactiva con luces y objetos colgantes de Lozano-Hemmer">
+
+                    <p>
+                        El trabajo de Rafael Lozano-Hemmer se basa en el desarrollo de
+                        sistemas tecnológicos que reaccionan a la presencia humana.
+                        Utiliza dispositivos como cámaras, micrófonos y sensores
+                        biométricos para captar información del entorno y
+                        transformarla en respuestas visuales o sonoras.
+                    </p>
+
+                    <p>
+                        Estas obras funcionan en tiempo real, generando una relación
+                        directa entre acción y resultado. El público no solo observa,
+                        sino que influye activamente en el comportamiento de la obra.
+                    </p>
+
+                    <h3 class="titulo3">El espectador como protagonista</h3>
+
+                    <p>
+                        En la obra de Rafael Lozano-Hemmer, el espectador ocupa un rol
+                        central. Las piezas están diseñadas para activarse únicamente a
+                        través de la participación, lo que transforma la experiencia
+                        artística en un proceso compartido.
+                    </p>
+
+                    <p>
+                        Esta participación redefine la relación tradicional entre obra
+                        y público. La interacción no es un complemento, sino el núcleo
+                        de la propuesta.
+                    </p>
+
+                </aside>
+
+
+                <!-- COLUMNA ANCHA -->
+
+                <section class="col-ancha">
+
+                    <h2 class="titulo2">Galería de obras</h2>
+
+                    <p>
+                        A continuación, cinco obras destacadas del artista, con su
+                        nombre y año de creación. La galería se genera con JavaScript
+                        a partir de un array de objetos.
+                    </p>
+
+
+                    <!-- La galería se completa con js/galeria.js -->
+
+                    <div id="galeria-obras"></div>
+
+
+                    <p>
+                        <span class="destacado">Indicación para interactuar:</span>
+                        presioná el siguiente botón para cambiar el diseño de la
+                        galería (tamaño y color de las tarjetas).
+                    </p>
+
+                    <button type="button" id="boton-diseno">Cambiar diseño de la galería</button>
+
+
+                    <h3 class="titulo3">Dato curioso</h3>
+
+                    <p>
+                        <span class="destacado">Indicación para interactuar:</span>
+                        presioná el botón para descubrir un dato curioso al azar sobre
+                        el artista.
+                    </p>
+
+                    <div id="caja-dato">
+
+                        <p id="texto-dato">Presioná el botón para ver un dato curioso.</p>
+
+                        <button type="button" id="boton-dato">Nuevo dato curioso</button>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+
+        <footer>
+
+            <p>
+                <span class="destacado">Para contactarse escribir a</span>
+                <a href="mailto:rafael@artedigital.com">rafael@artedigital.com</a>
+            </p>
+
+            <p>
+                IG2026 - Segundo Parcial - Informática General
+                <br>
+                Artes Multimediales - UNA
+            </p>
+
+            <p>
+                Alumno/a: Marcela Toledo
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

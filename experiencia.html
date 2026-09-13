@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Experiencia y ejercicio</title>
+
+
+    <!-- Ver declaración de uso de IA completa en index.html -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+
+<body>
+
+
+    <div id="pagina">
+
+
+        <header>
+
+            <h1 class="titulo1">Rafael Lozano-Hemmer</h1>
+
+            <h2 class="titulo2">Interactividad, espacio público y arte tecnológico</h2>
+
+        </header>
+
+
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">Inicio</a></li>
+
+                <li><a href="obras.html">Obras</a></li>
+
+                <li><a href="experiencia.html">Experiencia</a></li>
+
+            </ul>
+
+        </nav>
+
+
+        <main>
+
+
+            <!-- TEXTO: tecnología, crítica social y espacio público -->
+
+            <article class="bloque">
+
+                <h2 class="titulo2">Tecnología y crítica social</h2>
+
+                <img src="img/lozano-hemmer-3.jpg" alt="Instalación de luces colgantes de Lozano-Hemmer en un espacio oscuro">
+
+                <p>
+                    El uso de tecnología en su trabajo no es neutral, sino que se
+                    vincula con una mirada crítica sobre temas contemporáneos. Sus
+                    obras abordan problemáticas como la vigilancia masiva, el control
+                    de datos y la exposición de la identidad en espacios públicos.
+                </p>
+
+                <p>
+                    A través de estas propuestas, invita a reflexionar sobre cómo las
+                    tecnologías afectan la vida cotidiana. La interacción se convierte
+                    en una herramienta para visibilizar estas tensiones y cuestionar
+                    su impacto en la sociedad.
+                </p>
+
+                <h3 class="titulo3">Espacio público y experiencia colectiva</h3>
+
+                <p>
+                    Muchas de sus instalaciones se desarrollan en espacios urbanos, lo
+                    que permite ampliar el alcance del arte más allá de los ámbitos
+                    tradicionales. Estas intervenciones transforman el paisaje
+                    cotidiano en un entorno de experimentación.
+                </p>
+
+                <p>
+                    El carácter colectivo de estas obras genera experiencias
+                    compartidas entre desconocidos, promoviendo nuevas formas de
+                    interacción social. El espacio público se convierte así en un
+                    lugar de encuentro donde arte, tecnología y comunidad se
+                    entrelazan.
+                </p>
+
+            </article>
+
+
+            <!-- EJERCICIO -->
+
+            <section class="bloque">
+
+                <h2 class="titulo2">Ejercicio: control de luces móviles</h2>
+
+                <p>
+                    Sistema para controlar el funcionamiento de las luces móviles
+                    utilizadas en las obras de Rafael Lozano-Hemmer. Permite calcular
+                    el consumo eléctrico diario de un conjunto de obras.
+                </p>
+
+                <p>
+                    <span class="destacado">Indicaciones para interactuar:</span>
+                    el formulario se completa en tres pasos, en orden. Cada paso se
+                    habilita recién cuando termina el anterior:
+                </p>
+
+                <ul class="lista-conceptos">
+
+                    <li>Paso 1: ingresar cuántas obras se van a cargar.</li>
+
+                    <li>Paso 2: cargar el nombre, la cantidad de luces y las horas de
+                        funcionamiento por día de cada obra (se repite la cantidad de
+                        veces indicada en el paso 1).</li>
+
+                    <li>Paso 3: ingresar el consumo por hora de cada luz (en kWh) y el
+                        costo del kWh, y presionar "Calcular resultados".</li>
+
+                </ul>
+
+                <p>
+                    Al finalizar se puede presionar "Reiniciar" para volver a empezar
+                    con datos nuevos.
+                </p>
+
+
+                <!-- PASO 1: cantidad de obras -->
+
+                <form class="formulario-ejercicio" id="form-cantidad">
+
+                    <h3 class="titulo3">Paso 1: cantidad de obras</h3>
+
+                    <label for="cantidad-obras">¿Cuántas obras se van a cargar?</label>
+
+                    <input type="number" id="cantidad-obras" name="cantidad-obras" min="1" required>
+
+                    <br>
+
+                    <button type="button" id="boton-cantidad">Confirmar cantidad</button>
+
+                </form>
+
+
+                <!-- PASO 2: datos de cada obra -->
+
+                <form class="formulario-ejercicio" id="form-obra">
+
+                    <h3 class="titulo3">Paso 2: datos de la obra</h3>
+
+                    <p id="texto-progreso">Todavía no se confirmó la cantidad de obras.</p>
+
+                    <label for="nombre-obra">Nombre de la obra</label>
+
+                    <input type="text" id="nombre-obra" name="nombre-obra" disabled>
+
+                    <label for="cantidad-luces">Cantidad de luces móviles</label>
+
+                    <input type="number" id="cantidad-luces" name="cantidad-luces" min="1" disabled>
+
+                    <label for="horas-funcionamiento">Horas de funcionamiento por día</label>
+
+                    <input type="number" id="horas-funcionamiento" name="horas-funcionamiento" min="1" max="24" disabled>
+
+                    <br>
+
+                    <button type="button" id="boton-obra" disabled>Agregar obra</button>
+
+                </form>
+
+
+                <!-- PASO 3: datos generales de electricidad -->
+
+                <form class="formulario-ejercicio" id="form-general">
+
+                    <h3 class="titulo3">Paso 3: consumo y costo de electricidad</h3>
+
+                    <label for="consumo-luz">Consumo por hora de cada luz (kWh)</label>
+
+                    <input type="number" id="consumo-luz" name="consumo-luz" step="0.01" min="0.01" disabled>
+
+                    <label for="costo-kwh">Costo por kWh ($)</label>
+
+                    <input type="number" id="costo-kwh" name="costo-kwh" step="0.01" min="0.01" disabled>
+
+                    <br>
+
+                    <button type="button" id="boton-calcular" disabled>Calcular resultados</button>
+
+                </form>
+
+
+                <!-- RESULTADOS -->
+
+                <div id="resultados"></div>
+
+
+                <button type="button" id="boton-reiniciar" style="display: none;">Reiniciar</button>
+
+            </section>
+
+
+        </main>
+
+
+        <footer>
+
+            <p>
+                <span class="destacado">Para contactarse escribir a</span>
+                <a href="mailto:rafael@artedigital.com">rafael@artedigital.com</a>
+            </p>
+
+            <p>
+                IG2026 - Segundo Parcial - Informática General
+                <br>
+                Artes Multimediales - UNA
+            </p>
+
+            <p>
+                Alumno/a:Marcela Toledo
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="js/ejercicio.js"></script>
+
+
+</body>
+
+</html>
